@@ -9,107 +9,131 @@
   background: #d7d7d7;
   z-index: -10;
 }
-* .hero {
+* #hero {
   width: 100%;
   height: 100vh;
   background: #d7d7d7;
   z-index: 100;
 }
-* .hero .right {
+* #hero .right {
   width: 57%;
   height: 100vh;
   float: right;
   background: #000;
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
 }
-* .hero .right img {
+* #hero .right img {
   width: 150px;
   position: relative;
   top: 30%;
   transform: translateY(-50%);
 }
-* .hero .right .logo1 {
+* #hero .right .logo1 {
   position: relative;
   left: 30%;
   width: 140px;
 }
-* .hero .right .logo2 {
+* #hero .right .logo2 {
   position: relative;
   left: 50%;
   top: 35%;
   transform: translateY(-50%);
 }
-* .hero .right .logo3 {
+* #hero .right .logo3 {
   position: relative;
   top: 60%;
   transform: translateY(-50%);
   left: 10%;
 }
-* .hero .right .logo4 {
+* #hero .right .logo4 {
   position: relative;
   top: 65%;
   transform: translateY(-50%);
   left: 20%;
 }
-* .hero nav {
+* #hero nav {
   width: 100%;
   height: 46px;
   display: flex;
   justify-content: flex-end;
-  padding-right: 250px;
+  padding-right: 15%;
   padding-top: 65px;
 }
-* .hero nav ul {
+* #hero nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 637px;
   list-style: none;
 }
-* .hero nav ul a {
+* #hero nav ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 17px;
   font-weight: 700;
+  padding-bottom: 5px;
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
-* .hero nav ul .btn-nav {
-  padding: 14px;
+* #hero nav ul li .nav-link::before {
+  content: "";
+  position: absolute;
   background: #fff;
-  border-radius: 30px;
-  color: #000;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: transform 0.4s;
 }
-* .hero .info {
+* #hero nav ul li .nav-link:hover::before {
+  transform-origin: 0 0;
+  transform: scaleX(1);
+}
+* #hero nav ul li .btn-nav {
+  padding: 12px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 32px;
+  color: #000;
+  transition: 0.4s ease-in-out;
+}
+* #hero nav ul li .btn-nav:hover {
+  background: #000;
+  border: 2px solid #fff;
+  color: #fff;
+}
+* #hero .info {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 271px;
+  margin-left: 8%;
   height: auto;
   font-family: "Raleway", sans-serif;
 }
-* .hero .info h2 {
+* #hero .info h2 {
   margin-bottom: 54px;
   font-size: 40px;
   font-weight: 700;
 }
-* .hero .info h1 {
+* #hero .info h1 {
   font-size: 80px;
   font-weight: 700;
 }
-* .hero .info h3 {
+* #hero .info h3 {
   margin-bottom: 126px;
   font-size: 25px;
   font-weight: 800;
   color: #909090;
 }
-* .hero .info .link {
+* #hero .info .link {
   display: flex;
 }
-* .hero .info .link a {
+* #hero .info .link a {
   text-decoration: none;
   margin-right: 31px;
 }
-* .hero .info .link a i {
+* #hero .info .link a i {
   font-size: 30px;
   color: #000;
   display: flex;
@@ -121,19 +145,43 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.about {
+.development {
+  width: 100%;
+  height: 312px;
+  display: flex;
+  flex-direction: column;
+  background: #1d1d1d;
+  padding-left: 102px;
+  padding-top: 54px;
+}
+.development h3 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 35px;
+}
+.development p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+#about {
   background: #d7d7d7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 162px;
   padding-top: 142px;
+}
+#about .self-info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about .self-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about .self-info h2 {
+#about .self-info h2 {
   font-size: 30px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
@@ -141,7 +189,7 @@
   border: 8px solid;
   margin-bottom: 71px;
 }
-.about .self-info p {
+#about .self-info p {
   font-weight: 400;
   font-size: 18px;
   color: #050505;
@@ -149,72 +197,364 @@
   max-width: 600px;
   font-family: "Open Sans", sans-serif;
 }
-.about .container-skill-dev {
-  display: flex;
-  margin-top: 184px;
-  width: 100%;
-  justify-content: space-around;
-  padding: 0 200px;
-}
-.about .container-skill-dev h3 {
+#about h3 {
   font-size: 30px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   padding: 22px;
+  border: 8px solid;
+  margin-bottom: 71px;
 }
-.about .container-skill-dev .container-developpement {
-  width: 580px;
+#about #container-skill {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about .container-skill-dev .container-developpement p {
-  font-weight: 400;
-  font-size: 18px;
-  color: #050505;
-  padding-left: 80px;
-  font-family: "Open Sans", sans-serif;
-}
-.about .container-skill-dev .container-skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about .container-skill-dev .container-skill .skill-dev {
+#about #container-skill .skill-dev {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  width: 560px;
+  width: 760px;
 }
-.about .container-skill-dev .container-skill .skill-dev .content {
+#about #container-skill .skill-dev .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 180px;
   justify-content: space-between;
 }
-.about .container-skill-dev .container-skill .skill-dev .content2 {
+#about #container-skill .skill-dev .content2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 180px;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 40px;
 }
-.about .container-skill-dev .container-skill .skill-dev img {
+#about #container-skill .skill-dev img {
   width: 130px;
+  margin: 0px 30px;
 }
-.about .container-skill-dev .container-skill .skill-dev .logo-html {
+#about #container-skill .skill-dev .logo-html {
   width: 110px;
 }
-.about .container-skill-dev .container-skill .skill-dev .logo-css {
+#about #container-skill .skill-dev .logo-css {
   width: 110px;
 }
-.about .container-skill-dev .container-skill .skill-dev p {
+#about #container-skill .skill-dev p {
   font-size: 24px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
+}
+
+#portfolio {
+  background-position-y: -60px;
+  width: 100%;
+}
+#portfolio .content-parallax {
+  width: 100%;
+  height: 321px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#portfolio .content-parallax img {
+  width: 100%;
+  position: absolute;
+  top: -70px;
+  left: 0px;
+  z-index: -100;
+}
+#portfolio .content-parallax h2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  padding: 22px 60px;
+  border: 8px solid;
+}
+#portfolio img {
+  width: 100px;
+}
+#portfolio .bg-project {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d7d7d7;
+  padding-top: 112px;
+}
+#portfolio .bg-project .project {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+}
+#portfolio .bg-project .project .project-content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 50px;
+  width: 35%;
+  height: 320px;
+  overflow: hidden;
+}
+#portfolio .bg-project .project .project-content a {
+  background: orange;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#portfolio .bg-project .project .project-content a .content-img {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+#portfolio .bg-project .project .project-content a .content-img img {
+  width: 100%;
+}
+#portfolio .bg-project .project .project-content a .content-img .img2 {
+  width: 60%;
+}
+#portfolio .bg-project .project .project-content a .content-img .img4 {
+  width: 80%;
+}
+#portfolio .bg-project .project .project-content a .content-info {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background: #222;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+  transition: 0.6s ease-in-out;
+  z-index: 10000;
+}
+#portfolio .bg-project .project .project-content a p {
+  opacity: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+#portfolio .bg-project .project .project-content a:hover .content-info {
+  background: #000;
+  top: 0px;
+  left: 0px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #d7d7d7;
+  padding-top: 148px;
+}
+#contact h2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  padding: 22px 60px;
+  border: 8px solid;
+  margin-bottom: 150px;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact form input {
+  border: none;
+  background: transparent;
+  border-left: 5px solid #000;
+  border-bottom: 5px solid #000;
+  margin-bottom: 53px;
+  height: 48px;
+  width: 609px;
+  color: #8b8b8b;
+  padding-left: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+}
+#contact form textarea {
+  border: none;
+  background: transparent;
+  border-left: 5px solid #000;
+  border-bottom: 5px solid #000;
+  margin-bottom: 53px;
+  height: 184px;
+  width: 609px;
+  color: #8b8b8b;
+  padding-left: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+}
+#contact form button {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  padding: 14px 0;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  background: transparent;
+  width: 197px;
+  margin-bottom: 68px;
+  cursor: pointer;
+}
+
+#footer {
+  width: 100%;
+  height: 321px;
+  padding-top: 41px;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+#footer .container-contact {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+#footer .container-contact .contact {
+  text-align: center;
+}
+#footer .container-contact .contact .content-back {
+  text-decoration: none;
+  color: #fff;
+}
+#footer .container-contact .contact .content-back h5 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+#footer .container-contact .contact .content-contact {
+  display: flex;
+  margin: 10px 0;
+}
+#footer .container-contact .contact .content-contact p {
+  padding-left: 20px;
+}
+#footer .container-contact .contact .social {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 33px;
+}
+#footer .container-contact .contact .social a {
+  text-decoration: none;
+  color: #fff;
+}
+#footer .container-contact .contact .social a i {
+  padding: 0 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/**********************1630px **************************/
+@media (max-width: 1630px) {
+  #hero nav {
+    padding-right: 5%;
+  }
+  #hero nav a {
+    font-size: 16px;
+  }
+  #hero .right {
+    width: 59%;
+  }
+  #hero .right .logo1 {
+    left: 25%;
+  }
+  #hero .right .logo2 {
+    left: 45%;
+  }
+  #hero .right .logo3 {
+    left: 5%;
+  }
+  #hero .right .logo4 {
+    left: 15%;
+  }
+  #hero .info h2 {
+    font-size: 35px;
+  }
+  #hero .info h1 {
+    font-size: 65px;
+  }
+  #hero .info h3 {
+    font-size: 20px;
+  }
+  #hero .info .link a i {
+    font-size: 27px;
+    height: 55px;
+    width: 51px;
+  }
+}
+/***************************1350px*******************/
+@media (max-width: 1350px) {
+  #hero nav ul {
+    width: 537px;
+  }
+  #hero nav a {
+    font-size: 15px;
+  }
+  #hero .right {
+    width: 59%;
+  }
+  #hero .right .logo1 {
+    left: 25%;
+  }
+  #hero .right .logo2 {
+    left: 45%;
+  }
+  #hero .right .logo3 {
+    left: 5%;
+  }
+  #hero .right .logo4 {
+    left: 15%;
+  }
+  #hero .info h2 {
+    font-size: 30px;
+  }
+  #hero .info h1 {
+    font-size: 55px;
+  }
+  #hero .info h3 {
+    font-size: 18px;
+  }
+  #hero .info .link a i {
+    font-size: 27px;
+    height: 55px;
+    width: 51px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
