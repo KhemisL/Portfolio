@@ -183,7 +183,6 @@ body {
   padding-top: 142px;
 }
 #about .self-info {
-  border: 1px solid violet;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,19 +203,19 @@ body {
   max-width: 600px;
   font-family: "Open Sans", sans-serif;
 }
-#about h3 {
+#about #container-skill {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about #container-skill h3 {
   font-size: 30px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   padding: 22px;
   border: 8px solid;
   margin-bottom: 71px;
-}
-#about #container-skill {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 #about #container-skill .skill-dev {
   display: flex;
@@ -875,27 +874,6 @@ body {
     max-width: 600px;
     font-family: "Open Sans", sans-serif;
   }
-  #portfolio .content-parallax {
-    display: flex;
-  }
-  #portfolio .content-parallax img {
-    top: 100px;
-    left: 0px;
-    z-index: -100;
-  }
-  #portfolio .content-parallax h2 {
-    font-size: 30px;
-    font-weight: 700;
-    font-family: "Montserrat", sans-serif;
-    padding: 22px 60px;
-    border: 8px solid;
-  }
-  #portfolio .bg-project .project {
-    width: 100%;
-  }
-  #portfolio .bg-project .project .project-content {
-    width: 60%;
-  }
   #container-skill {
     margin-top: 100px;
     display: flex;
@@ -940,6 +918,27 @@ body {
     font-size: 16px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
+  }
+  #portfolio .content-parallax {
+    display: flex;
+  }
+  #portfolio .content-parallax img {
+    top: 100px;
+    left: 0px;
+    z-index: -100;
+  }
+  #portfolio .content-parallax h2 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    padding: 22px 60px;
+    border: 8px solid;
+  }
+  #portfolio .bg-project .project {
+    width: 100%;
+  }
+  #portfolio .bg-project .project .project-content {
+    width: 60%;
   }
   #contact {
     display: flex;
