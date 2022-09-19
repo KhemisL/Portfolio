@@ -8,7 +8,7 @@ function main() {
     sendEmail();
     smoothScroll()
     AOS.init();
-
+    activeMenu()
     
 }
 
@@ -68,27 +68,6 @@ function parallax() {
 }
 
 
-// function animeAbout() {
-//     const about = document.querySelector(".aboutMe")
-//     const skill = document.querySelector(".titleSkill")
-//     const skill1 = document.querySelector(".content")
-//     const skill2 = document.querySelector(".content2")
-    
-//     window.addEventListener("scroll", ()=>{
-//         const {scrollTop, clientHeight} = document.documentElement
-//         const top = animeAbout().getBoundingClientRect().top
-//         if (scrollTop > (scrollTop + top).tofixed() - clientHeight * 0.50) {
-            
-//         }
-//     })
-//     const TL = new TimelineMax({paused: false});
-
-//     TL
-//     .from(logoHtml, 1, {opacity: 0, x: -400})
-//     .from(logoJs, 1, {opacity: 0, y: -300}, "-=0.4")
-//     .from(logoNode, 1, {opacity: 0, y: 300}, "-=0.8")
-//     .from(logoReact, 1, {opacity: 0, x: 250}, "-=2")
-// }
 
 function smoothScroll() {
     const navLink = [...document.querySelectorAll("nav a")]
@@ -128,3 +107,11 @@ btn.addEventListener("click", (e)=>{
 }
 
 
+function activeMenu() {
+    const nav = document.querySelector(".container-nav");
+    const hamburger = document.querySelector(".burger")
+
+    hamburger.addEventListener("click", ()=>{
+        nav.classList.toggle("active")
+    })
+}
