@@ -222,7 +222,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  width: 55%;
 }
 #about #container-skill .skill-dev .content {
   display: flex;
